@@ -166,19 +166,13 @@ namespace hhh
         typedef shared_ptr<Logger> ptr;
         void log(LogLevel::Level level, LogEvent::ptr event);
 
-        void debug(LogEvent::ptr event);
-        void warn(LogEvent::ptr event);
-        void info(LogEvent::ptr event);
-        void error(LogEvent::ptr even);
-        void fatal(LogEvent::ptr event);
-
         void addAppender(LogAppender::ptr appender);
         void delAppender(LogAppender::ptr appender);
         LogLevel::Level getLevel()const { return m_level; }
         void setLevel(LogLevel::Level val) { m_level = val; }
 
         const string& getname()const { return m_name; }
-        void renew(LogFormatter::ptr a);
+
     private:
         std::string m_name;
         LogLevel::Level m_level;
@@ -207,13 +201,12 @@ namespace hhh
         ofstream m_filestream;
 
     };
+
     class LoggerManager
     {
     public:
         LoggerManager();
         Logger::ptr getLogger(const string &name);
-
-        void init();
         Logger::ptr getRoot()const{return m_root;}
     private:
         map<string ,Logger::ptr>m_logger;

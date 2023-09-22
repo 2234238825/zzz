@@ -25,7 +25,7 @@ namespace hhh
             default:
                 return "UNKNOW";
         }
-        return "UNKOWN";
+
     }
     LogEventWrap::LogEventWrap(LogEvent::ptr e):m_event(e){}
 
@@ -225,45 +225,9 @@ namespace hhh
         }
     }
 
-    void Logger::debug(LogEvent::ptr event)
-    {
-        log(LogLevel::DEBUG, event);
-    }
 
-    void Logger::info(LogEvent::ptr event)
-    {
-        log(LogLevel::INFO, event);
-    }
 
-    void Logger::warn(LogEvent::ptr event)
-    {
-        log(LogLevel::WARN, event);
-    }
-
-    void Logger::error(LogEvent::ptr event)
-    {
-        log(LogLevel::ERROR, event);
-    }
-
-    void Logger::fatal(LogEvent::ptr event)
-    {
-        log(LogLevel::FATAL, event);
-    }
-
-/*
- * 乱写的
- * */
-    void Logger::renew(LogFormatter::ptr a)
-    {
-        this->m_appenders.clear();
-       // m_appenders.insert(LogAppender::ptr (new StdoutLogAppender));
-        this->m_formatter = a;
-    }
-
-    FileLogAppender::FileLogAppender(const string& filename):m_filename(filename)
-    {
-
-    }
+    FileLogAppender::FileLogAppender(const string& filename):m_filename(filename){}
 
     void FileLogAppender::log(shared_ptr<Logger>logger,LogLevel::Level level, LogEvent::ptr event)
     {
@@ -330,93 +294,6 @@ namespace hhh
                 i++;
             }
         }
-/*        string nstr;
-        for (size_t i = 0; i < m_pattern.size(); ++i)
-        {
-
-            if (m_pattern[i] != '%')
-            {
-                nstr.append(1, m_pattern[i]);
-                continue;
-            }
-
-            if ((i + 1) < m_pattern.size())
-            {
-                if (m_pattern[i + 1] == '%')
-                {
-                    nstr.append(1, '%');
-                    continue;
-                }
-            }
-
-            size_t n = i + 1;
-            int fmt_status = 0;
-            size_t fmt_begin = 0;
-
-            string str;
-            string fmt;
-            while (n < m_pattern.size())
-            {
-                if (!fmt_status && (!isalpha(m_pattern[n]) && m_pattern[n] != '{'
-                                    && m_pattern[n] != '}'))
-                {
-                    str = m_pattern.substr(i + 1, n - i - 1);
-                    break;
-                }
-                if (fmt_status == 0) {
-                    if (m_pattern[n] == '{')
-                    {
-                        str = m_pattern.substr(i + 1, n - i - 1);
-                        //cout << "*" << str << endl;
-                        fmt_status = 1; //解析格式
-                        fmt_begin = n;
-                        ++n;
-                        continue;
-                    }
-                }
-                else if (fmt_status == 1)
-                {
-                    if (m_pattern[n] == '}')
-                    {
-                        fmt = m_pattern.substr(fmt_begin + 1, n - fmt_begin - 1);
-                        //cout << "#" << fmt << endl;
-                        fmt_status = 0;
-                        ++n;
-                        break;
-                    }
-                }
-                ++n;
-                if (n == m_pattern.size())
-                {
-                    if (str.empty()) {
-                        str = m_pattern.substr(i + 1);
-                    }
-                }
-            }
-
-            if (fmt_status == 0)
-            {
-                if (!nstr.empty())
-                {
-                    vec.emplace_back(nstr, string(), 0);
-                    nstr.clear();
-                }
-                str =  m_pattern.substr(i+1,n-i-1);
-                vec.emplace_back(str, fmt, 1);
-                i = n ;
-            }
-            else if (fmt_status == 1)
-            {
-                cout << "pattern parse error: " << m_pattern << " - " << m_pattern.substr(i) << endl;
-                m_error = true;
-                vec.emplace_back("<<pattern_error>>", fmt, 0);
-            }
-        }
-
-        if (!nstr.empty())
-        {
-            vec.emplace_back(nstr, "", 0);
-        }*/
 
 #define XX(str, C) {#str, [](const string& fmt ) { return shared_ptr<FormatItem>(new C(fmt));}}
         static map<string, function<shared_ptr<FormatItem>(const string& str)> > s_format_items = //这一段应该是智能指针重载了()

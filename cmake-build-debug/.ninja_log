@@ -1,9 +1,9 @@
 # ninja log v5
+0	62	7170716104651906	build.ninja	d6c2e0b8165a92b3
 12	47	7168988462404575	CMakeFiles/untitled.dir/main.cpp.obj	88757f35e371cac5
-0	62	7169701254670889	build.ninja	d6c2e0b8165a92b3
 4	199	7169680329404119	untitled.exe	1e487cb5462bf8f0
-4	1167	7168834031755015	CMakeFiles/untitled.dir/log.cpp.obj	bfc323f2d1be980f
 11	153	7161353557218890	CMakeFiles/untitled.dir/singleton.cpp.obj	d77b9aa929efa489
+4	1167	7168834031755015	CMakeFiles/untitled.dir/log.cpp.obj	bfc323f2d1be980f
 6	142	7168988463351436	CMakeFiles/untitled.dir/src/singleton.cpp.obj	b6703292a7a9e0e3
 4	48	7168835263079353	CMakeFiles/untitled.dir/util.cpp.obj	ab0f5d17db5f0ad7
 5	1458	7169680297917167	CMakeFiles/untitled.dir/testLog.cpp.obj	db6afea0d7ae7ad
@@ -12,3 +12,17 @@
 0	470	7168835722878152	CMakeFiles/untitled.dir/src/testLog.cpp.obj	947590aa20507fbf
 4	661	7168988468537152	CMakeFiles/untitled.dir/src/config.cpp.obj	cf2dd9861695473e
 15	906	7168988470957672	CMakeFiles/untitled.dir/src/log.cpp.obj	a2e8781ffb442cb7
+1	837	7170716104651906	build.ninja	d6c2e0b8165a92b3
+6	1262	7170716117395370	CMakeFiles/untitled.dir/testLog.cpp.obj	db6afea0d7ae7ad
+4	1412	7170716118851805	CMakeFiles/untitled.dir/src/log.cpp.obj	a2e8781ffb442cb7
+1412	2092	7170716125668599	untitled.exe	1e487cb5462bf8f0
+4	442	7170722029706652	CMakeFiles/untitled.dir/testLog.cpp.obj	db6afea0d7ae7ad
+442	656	7170722031808575	untitled.exe	1e487cb5462bf8f0
+11	450	7170724494560098	CMakeFiles/untitled.dir/testLog.cpp.obj	db6afea0d7ae7ad
+9	721	7170724497276207	CMakeFiles/untitled.dir/src/config.cpp.obj	cf2dd9861695473e
+5	875	7170724498772501	CMakeFiles/untitled.dir/src/log.cpp.obj	a2e8781ffb442cb7
+875	1110	7170724501129356	untitled.exe	1e487cb5462bf8f0
+7	417	7170728614704844	CMakeFiles/untitled.dir/testLog.cpp.obj	db6afea0d7ae7ad
+10	756	7170728618108812	CMakeFiles/untitled.dir/src/config.cpp.obj	cf2dd9861695473e
+5	957	7170728620084783	CMakeFiles/untitled.dir/src/log.cpp.obj	a2e8781ffb442cb7
+957	1148	7170728621999706	untitled.exe	1e487cb5462bf8f0
