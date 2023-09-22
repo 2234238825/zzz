@@ -34,6 +34,7 @@ int main()
 
 int main(int argc, char** argv)
 {
+
     hhh::Logger::ptr logger(new Logger);
     logger->addAppender(LogAppender::ptr(new StdoutLogAppender));
 

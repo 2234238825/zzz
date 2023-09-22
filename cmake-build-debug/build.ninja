@@ -155,6 +155,7 @@ build CMakeFiles/untitled.dir/src/config.cpp.obj: CXX_COMPILER__untitled_unscann
 build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/src/log.cpp.obj CMakeFiles/untitled.dir/src/util.cpp.obj CMakeFiles/untitled.dir/src/singleton.cpp.obj CMakeFiles/untitled.dir/testLog.cpp.obj CMakeFiles/untitled.dir/src/config.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_PATH = -LD:/software/Boost/boost_1_82_0/boost_1_82_0/stage/lib
   OBJECT_DIR = CMakeFiles\untitled.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

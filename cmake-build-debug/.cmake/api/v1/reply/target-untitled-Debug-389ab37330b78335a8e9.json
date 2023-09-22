@@ -14,6 +14,7 @@
 		"commands" : 
 		[
 			"add_executable",
+			"link_directories",
 			"include_directories"
 		],
 		"files" : 
@@ -34,11 +35,17 @@
 			{
 				"command" : 1,
 				"file" : 0,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
 				"line" : 7,
 				"parent" : 0
 			},
 			{
-				"command" : 1,
+				"command" : 2,
 				"file" : 0,
 				"line" : 8,
 				"parent" : 0
@@ -57,11 +64,11 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"path" : "D:/software/Boost/boost_1_82_0/boost_1_82_0"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "D:/CLionProjects/untitled/include"
 				}
 			],
@@ -97,6 +104,11 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-LD:\\software\\Boost\\boost_1_82_0\\boost_1_82_0\\stage\\lib",
+				"role" : "libraryPath"
 			},
 			{
 				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
